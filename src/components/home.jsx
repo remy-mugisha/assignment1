@@ -24,12 +24,12 @@ const Home = () => {
     const interval = setInterval(() => {
       setCurrentStopIndex(prevIndex => {
         const newIndex = (prevIndex + 1) % routeCoordinates.length;
-        setCenter(routeCoordinates[newIndex]); // Update the center to the new bus position
+        setCenter(routeCoordinates[newIndex]); 
         return newIndex;
       });
-    }, 3000); // Move to the next stop every 3 seconds
+    }, 3000); 
 
-    return () => clearInterval(interval); // Clean up the interval on component unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
